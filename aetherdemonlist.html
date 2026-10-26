@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aether Demonlist</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #f4f5f7;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+nav {
+    max-width: 950px;
+    margin: auto;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav span { color: #5279d8; }
+
+main {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+input {
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 240px;
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.rank {
+    width: 40px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: #555;
+    flex-shrink: 0;
+}
+
+.thumbnail {
+    width: 130px;
+    height: 75px;
+    object-fit: cover;
+    background: #eee;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.info { min-width: 0; }
+
+.name {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.creator {
+    font-size: 13px;
+    color: #777;
+}
+
+#empty {
+    display: none;
+    padding: 25px;
+    color: #777;
+    text-align: center;
+}
+
+footer {
+    max-width: 950px;
+    margin: 40px auto 0;
+    padding: 20px;
+    color: #888;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
+}
+
+@media (max-width: 500px) {
+    main { padding: 0 12px; }
+
+    .level {
+        gap: 10px;
+        padding: 9px;
+    }
+
+    .rank {
+        width: 27px;
+        font-size: 19px;
+    }
+
+    .thumbnail {
+        width: 85px;
+        height: 60px;
+    }
+
+    .name { font-size: 14px; }
+
+    input { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+<header>
+    <nav>AETHER <span>DEMONLIST</span></nav>
+</header>
+
+<main>
+    <h1>Aether Demonlist</h1>
+    <p class="subtitle">Aether GDPS Demon Rankings</p>
+
+    <div class="toolbar">
+        <h2>Rated Levels</h2>
+        <input id="search" type="search"
+               placeholder="Search levels..."
+               aria-label="Search levels">
+    </div>
+
+    <section id="levels">
+        <article class="level" data-search="deadlocked robtop">
+            <div class="rank">#1</div>
+            <img
+                class="thumbnail"
+                src="https://geometry.games/images/geometry-dash-deadlocked.png"
+                alt="Deadlocked">
+            <div class="info">
+                <div class="name">Deadlocked</div>
+                <div class="creator">by RobTop</div>
+            </div>
+        </article>
+
+        <article class="level" data-search="theory of everything 2 toe2 robtop">
+            <div class="rank">#2</div>
+            <img
+                class="thumbnail"
+                src="https://vignette.wikia.nocookie.net/geometry-dash/images/a/a8/TheoryOfEverything2Menu.png/revision/latest/scale-to-width-down/999?cb=20170503181239"
+                alt="Theory of Everything 2">
+            <div class="info">
+                <div class="name">Theory of Everything 2</div>
+                <div class="creator">by RobTop</div>
+            </div>
+        </article>
+
+        <article class="level" data-search="clubstep robtop">
+            <div class="rank">#3</div>
+            <img
+                class="thumbnail"
+                src="https://causalzap.com/images/blogs/gd-clubstep-beginner-gate.webp"
+                alt="Clubstep">
+            <div class="info">
+                <div class="name">Clubstep</div>
+                <div class="creator">by RobTop</div>
+            </div>
+        </article>
+    </section>
+
+    <div id="empty">No rated levels found.</div>
+</main>
+
+<footer>
+    GDPS Demon Ranking
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const levels = [...document.querySelectorAll(".level")];
+const empty = document.getElementById("empty");
+
+search.addEventListener("input", () => {
+    const query = search.value.toLowerCase().trim();
+    let visible = 0;
+
+    levels.forEach(level => {
+        const matches = level.dataset.search.includes(query);
+        level.style.display = matches ? "flex" : "none";
+        if (matches) visible++;
+    });
+
+    empty.style.display = visible ? "none" : "block";
+});
+</script>
+</body>
+</html>
