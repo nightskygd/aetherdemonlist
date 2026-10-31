@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Aether Demonlist — Geometry Dash demon rankings and rated levels.">
+  <title>Aether Demonlist</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header><div class="header-inner"><div class="brand">AETHER DEMONLIST</div></div></header>
+  <main>
+    <section class="hero">
+      <h1>Aether Demonlist</h1>
+      <p class="subtitle">Aether GDPS Demon Rankings</p>
+    </section>
+
+    <section aria-labelledby="rated-title">
+      <div class="section-heading">
+        <h2 id="rated-title">Rated Levels</h2>
+        <span class="count" id="level-count">Loading...</span>
+      </div>
+
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search levels or creators..." aria-label="Search levels or creators">
+        <select id="difficulty-filter" aria-label="Filter by demon difficulty">
+          <option value="all">All difficulties</option>
+          <option value="1">Easy Demon</option>
+          <option value="2">Medium Demon</option>
+          <option value="3">Hard Demon</option>
+          <option value="4">Insane Demon</option>
+          <option value="5">Extreme Demon</option>
+        </select>
+        <select id="sort-order" aria-label="Sort order">
+          <option value="hardest">Hardest first</option>
+          <option value="easiest">Easiest first</option>
+        </select>
+      </div>
+
+      <div class="level-list" id="level-list" aria-live="polite"></div>
+      <div class="empty" id="empty-state" hidden>No levels found.</div>
+      <div class="error" id="error-state" hidden>
+        Could not load <code>levels.json</code>. Open this project with a local server (for example, VS Code Live Server).
+      </div>
+    </section>
+  </main>
+  <footer>Aether Demonlist · GDPS Demon Ranking</footer>
+</body>
+</html>

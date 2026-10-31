@@ -1,0 +1,36 @@
+{
+  "Levels": {
+    "1": {
+      "LevelName": "Triple 6Seven",
+      "CreatorUser": "Foxiies",
+      "Verificator": null,
+      "TypeOfDemon": 4,
+      "ClubstepDifficulty": 3,
+      "Thumbnail": ""
+    },
+    "2": {
+      "LevelName": "Deadlocked",
+      "CreatorUser": "RobTop",
+      "Verificator": null,
+      "TypeOfDemon": 1,
+      "ClubstepDifficulty": null,
+      "Thumbnail": "https://geometry.games/assets/images/levels/deadlocked.png"
+    },
+    "3": {
+      "LevelName": "Theory of Everything 2",
+      "CreatorUser": "RobTop",
+      "Verificator": null,
+      "TypeOfDemon": 1,
+      "ClubstepDifficulty": null,
+      "Thumbnail": "https://www.causalzap.com/images/levels/theory-of-everything-2.png"
+    },
+    "4": {
+      "LevelName": "Clubstep",
+      "CreatorUser": "RobTop",
+      "Verificator": null,
+      "TypeOfDemon": 1,
+      "ClubstepDifficulty": null,
+      "Thumbnail": "https://static.wikia.nocookie.net/geometry-dash/images/clubstep.png"
+    }
+  }
+}
