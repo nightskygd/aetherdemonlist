@@ -14,7 +14,7 @@
       "Verificator": null,
       "TypeOfDemon": 1,
       "ClubstepDifficulty": null,
-      "Thumbnail": "/thumbnails/deadlocked"
+      "Thumbnail": "./thumbnails/deadlocked.png"
     },
     "3": {
       "LevelName": "Theory of Everything 2",
@@ -22,7 +22,7 @@
       "Verificator": null,
       "TypeOfDemon": 1,
       "ClubstepDifficulty": null,
-      "Thumbnail": "https://www.causalzap.com/images/levels/theory-of-everything-2.png"
+      "Thumbnail": "./thumbnails/toe2.png"
     },
     "4": {
       "LevelName": "Clubstep",
@@ -30,7 +30,7 @@
       "Verificator": null,
       "TypeOfDemon": 1,
       "ClubstepDifficulty": null,
-      "Thumbnail": "https://static.wikia.nocookie.net/geometry-dash/images/clubstep.png"
+      "Thumbnail": "./thumbnails/clubstep.png"
     }
   }
 }
