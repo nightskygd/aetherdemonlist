@@ -6,7 +6,7 @@
       "Verificator": null,
       "TypeOfDemon": 4,
       "ClubstepDifficulty": 3,
-      "Thumbnail": ""
+      "Thumbnail": "./thumbnails/triple6seven.png"
     },
     "2": {
       "LevelName": "Deadlocked",
@@ -31,6 +31,13 @@
       "TypeOfDemon": 1,
       "ClubstepDifficulty": null,
       "Thumbnail": "./thumbnails/clubstep.png"
-    }
+    },
+    "5": {
+      "LevelName": "Deathcube",
+      "CreatorUser": "Foxiies",
+      "Verificator": null,
+      "TypeOfDemon": 2,
+      "ClubstepDifficulty": 1.8,
+      "Thumbnail": "./thumbnails/deathcube.png"
   }
 }
